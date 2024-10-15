@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap'); /* weight: 400 */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap'); /* weight: 700 */
+
+:root {
+    --bright-orange:hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --bg--headings-buttoms: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 3rem;
+    height: 100vh;
+}
+
+.card {
+    width: 330px;
+    background-color: aqua;
+    padding: 2rem;
+    border-radius: var(--very-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.card img {
+    width: 80px;
+}
+
+.title {
+    font-family: "Big Shoulders Display", sans-serif;
+    margin-block: 1rem;
+    color: var(--bg--headings-buttoms);
+    font-size: 2.3rem;
+}
+
+.description {
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--paragraphs);
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.cta {
+    background-color: var(--bg--headings-buttoms);
+    padding: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    width: 60%;
+    text-align: center;
+}
+
+.card-1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--bright-orange);
+}
+
+.card-1 a {
+    color: var(--bright-orange);
+    font-weight: 700;
+}
+
+.card-2 {
+    background-color: var(--dark-cyan);
+}
+
+.card-2 a {
+    color: var(--dark-cyan);
+    font-weight: 700;
+}
+
+.card-3 {
+    background-color: var(--very-dark-cyan);
+}
+
+.card-3 a {
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+}
+
+@media (width >= 1440px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-1 {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+
+    .card-3 {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
